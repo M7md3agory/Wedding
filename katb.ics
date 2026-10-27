@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mohamed & Sohaila//Wedding//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:katb-20261219@m7md3agory.github.io
+DTSTAMP:20261027T120000Z
+DTSTART:20261219T130000Z
+DTEND:20261219T143000Z
+SUMMARY:عقد قران محمد وسهيلة | Katb El-Ketab - Mohamed & Sohaila
+LOCATION:قرية ديفا العبد - Diva El-Abd Village
+DESCRIPTION:Location: https://maps.app.goo.gl/qY4fRpNYsn5C37GP8
+URL:https://m7md3agory.github.io/Wedding/
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P7D
+DESCRIPTION:عقد قران محمد وسهيلة | Katb El-Ketab - Mohamed & Sohaila - بعد أسبوع - In one week
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2D
+DESCRIPTION:عقد قران محمد وسهيلة | Katb El-Ketab - Mohamed & Sohaila - بعد يومين - In two days
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:عقد قران محمد وسهيلة | Katb El-Ketab - Mohamed & Sohaila - غداً - Tomorrow
+END:VALARM
+END:VEVENT
+END:VCALENDAR

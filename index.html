@@ -254,7 +254,8 @@ img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
     </dl>
     <div class="btns">
       <a class="btn" href="https://maps.app.goo.gl/qY4fRpNYsn5C37GP8" target="_blank" rel="noopener" data-i18n="bMap">الموقع</a>
-      <a class="btn" id="cal1" target="_blank" rel="noopener" data-i18n="bCal">أضف للتقويم</a>
+      <a class="btn" href="katb.ics" download="katb.ics" data-i18n="bCal">أضف للتقويم</a>
+      <a class="btn" id="cal1" target="_blank" rel="noopener">Google Calendar</a>
     </div>
   </section>
 
@@ -270,13 +271,15 @@ img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
     </dl>
     <div class="btns">
       <a class="btn" href="https://maps.app.goo.gl/qY4fRpNYsn5C37GP8" target="_blank" rel="noopener" data-i18n="bMap">الموقع</a>
-      <a class="btn" id="cal2" target="_blank" rel="noopener" data-i18n="bCal">أضف للتقويم</a>
+      <a class="btn" href="zifaf.ics" download="zifaf.ics" data-i18n="bCal">أضف للتقويم</a>
+      <a class="btn" id="cal2" target="_blank" rel="noopener">Google Calendar</a>
     </div>
   </section>
 
   <section class="card light">
     <h3 data-i18n="noteT">تنويه لطيف</h3>
     <p class="note" data-i18n="note">حضوركم يزيد فرحتنا جمالاً، ويسعدنا أن تشاركونا يومنا بإطلالة أنيقة محتشمة تليق بفرحتنا وبكم.</p>
+    <p class="note" style="font-size:.88rem" data-i18n="remind">أضيفوا الموعد إلى تقويمكم ليذكّركم قبل الفرح بأسبوع، وبيومين، وبيوم.</p>
     <p class="strong" data-i18n="family">حفل الزفاف يقتصر على الأقارب من الدرجة الأولى فقط.</p>
   </section>
 
@@ -315,7 +318,7 @@ const INVITE_URL = /github\.io$/.test(location.hostname) ? location.href.split("
 // ======================
 
 const T={
-ar:{tap:"اضغط على الختم لفتح الدعوة",open:"افتح الدعوة",kicker:"Wedding Day",invite:"يتشرفان بدعوتكم",tGroom:"المهندس",nGroom:"محمد العجوري",tBride:"الدكتورة",nBride:"سهيلة البنا",
+ar:{remind:"أضيفوا الموعد إلى تقويمكم ليذكّركم قبل الفرح بأسبوع، وبيومين، وبيوم.",tap:"اضغط على الختم لفتح الدعوة",open:"افتح الدعوة",kicker:"Wedding Day",invite:"يتشرفان بدعوتكم",tGroom:"المهندس",nGroom:"محمد العجوري",tBride:"الدكتورة",nBride:"سهيلة البنا",
  lead:"لمشاركتنا فرحتنا وحضور حفل عقد القران، وبحضوركم تكتمل سعادتنا وأُنسنا.",verseTr:"",dayB:"السبت",daySub:"Saturday",monB:"ديسمبر",
  cdT:"المتبقي على يومنا المميز",cdD:"يوم",cdH:"ساعة",cdM:"دقيقة",cdS:"ثانية",p1:"الجزء الأول",katb:"عقد القران",p2:"الجزء الثاني",zifaf:"حفل الزفاف",
  lDate:"التاريخ",lTime:"الموعد",lPlace:"المكان",vDate:"السبت 19 ديسمبر 2026",t1:"3:00 - 4:30 عصراً",t2:"5:00 - 7:00 مساءً",venue:"قرية ديفا العبد",bMap:"الموقع",bCal:"أضف للتقويم",
@@ -325,7 +328,7 @@ ar:{tap:"اضغط على الختم لفتح الدعوة",open:"افتح الد
  needName:"من فضلك اكتب الاسم",sending:"جاري الإرسال...",thanks:"شكراً {n}، تم تأكيد حضوركم. ننتظركم بكل حب",fail:"تعذر الإرسال الآن، حاول مرة أخرى",copied:"تم نسخ الرابط",
  shareText:"دعوة لحضور حفل زفاف م. محمد العجوري و د. سهيلة البنا - السبت 19 ديسمبر 2026",shareTitle:"دعوة زفاف",musicOn:"إيقاف الموسيقى",musicOff:"تشغيل الموسيقى",
  cal1:"عقد قران محمد العجوري وسهيلة البنا",cal2:"حفل زفاف محمد العجوري وسهيلة البنا"},
-en:{tap:"Tap the seal to open the invitation",open:"Open the invitation",kicker:"Wedding Day",invite:"request the honour of your presence",tGroom:"Eng.",nGroom:"Mohamed Elaggouri",tBride:"Dr.",nBride:"Sohaila El-Banna",
+en:{remind:"Add the date to your calendar and it will remind you one week, two days and one day before.",tap:"Tap the seal to open the invitation",open:"Open the invitation",kicker:"Wedding Day",invite:"request the honour of your presence",tGroom:"Eng.",nGroom:"Mohamed Elaggouri",tBride:"Dr.",nBride:"Sohaila El-Banna",
  lead:"to share our joy and attend our Katb El-Ketab (marriage contract) ceremony. Your presence completes our happiness.",
  verseTr:"“And among His signs is that He created for you spouses from among yourselves, that you may find tranquility in them; and He placed between you affection and mercy.” (Ar-Rum 30:21)",
  dayB:"Saturday",daySub:"السبت",monB:"December",cdT:"Counting down to our special day",cdD:"Days",cdH:"Hours",cdM:"Minutes",cdS:"Seconds",
@@ -337,7 +340,7 @@ en:{tap:"Tap the seal to open the invitation",open:"Open the invitation",kicker:
  needName:"Please write your name",sending:"Sending...",thanks:"Thank you {n}, your attendance is confirmed. We look forward to seeing you!",fail:"Couldn't send right now, please try again",copied:"Link copied",
  shareText:"You're invited to the wedding of Eng. Mohamed Elaggouri & Dr. Sohaila El-Banna - Saturday, 19 December 2026",shareTitle:"Wedding invitation",musicOn:"Pause music",musicOff:"Play music",
  cal1:"Katb El-Ketab - Mohamed & Sohaila",cal2:"Wedding - Mohamed & Sohaila"},
-de:{tap:"Tippe auf das Siegel, um die Einladung zu öffnen",open:"Einladung öffnen",kicker:"Hochzeitstag",invite:"laden Sie herzlich ein",tGroom:"Ing.",nGroom:"Mohamed Elaggouri",tBride:"Dr.",nBride:"Sohaila El-Banna",
+de:{remind:"Tragen Sie den Termin in Ihren Kalender ein, er erinnert Sie eine Woche, zwei Tage und einen Tag vorher.",tap:"Tippe auf das Siegel, um die Einladung zu öffnen",open:"Einladung öffnen",kicker:"Hochzeitstag",invite:"laden Sie herzlich ein",tGroom:"Ing.",nGroom:"Mohamed Elaggouri",tBride:"Dr.",nBride:"Sohaila El-Banna",
  lead:"unsere Freude mit uns zu teilen und an unserer Trauung (Katb El-Ketab) teilzunehmen. Mit Ihnen ist unser Glück vollkommen.",
  verseTr:"„Und zu Seinen Zeichen gehört, dass Er euch aus euch selbst Gattinnen erschaffen hat, damit ihr bei ihnen Ruhe findet; und Er hat zwischen euch Zuneigung und Barmherzigkeit gesetzt.“ (Ar-Rum 30:21)",
  dayB:"Samstag",daySub:"السبت",monB:"Dezember",cdT:"Countdown bis zu unserem großen Tag",cdD:"Tage",cdH:"Stunden",cdM:"Minuten",cdS:"Sekunden",
@@ -349,17 +352,17 @@ de:{tap:"Tippe auf das Siegel, um die Einladung zu öffnen",open:"Einladung öff
  needName:"Bitte geben Sie Ihren Namen ein",sending:"Wird gesendet...",thanks:"Danke {n}, Ihre Teilnahme ist bestätigt. Wir freuen uns auf Sie!",fail:"Senden gerade nicht möglich, bitte erneut versuchen",copied:"Link kopiert",
  shareText:"Einladung zur Hochzeit von Ing. Mohamed Elaggouri & Dr. Sohaila El-Banna - Samstag, 19. Dezember 2026",shareTitle:"Hochzeitseinladung",musicOn:"Musik pausieren",musicOff:"Musik abspielen",
  cal1:"Katb El-Ketab - Mohamed & Sohaila",cal2:"Hochzeit - Mohamed & Sohaila"},
-pt:{tap:"Toque no selo para abrir o convite",open:"Abrir o convite",kicker:"Dia do Casamento",invite:"têm a honra de convidá-lo",tGroom:"Eng.º",nGroom:"Mohamed Elaggouri",tBride:"Dra.",nBride:"Sohaila El-Banna",
- lead:"para partilhar a nossa alegria e assistir à nossa cerimónia de Katb El-Ketab (contrato de casamento). A sua presença completa a nossa felicidade.",
- verseTr:"“E entre os Seus sinais está o de ter criado para vós esposas de vós mesmos, para que nelas encontreis tranquilidade, e pôs entre vós afeição e misericórdia.” (Ar-Rum 30:21)",
- dayB:"Sábado",daySub:"السبت",monB:"Dezembro",cdT:"Contagem decrescente para o nosso grande dia",cdD:"Dias",cdH:"Horas",cdM:"Minutos",cdS:"Segundos",
+pt:{remind:"Adicione a data à sua agenda e ela vai lembrar você uma semana, dois dias e um dia antes.",tap:"Toque no selo para abrir o convite",open:"Abrir o convite",kicker:"Dia do Casamento",invite:"têm a honra de convidar você",tGroom:"Eng.",nGroom:"Mohamed Elaggouri",tBride:"Dra.",nBride:"Sohaila El-Banna",
+ lead:"para compartilhar nossa alegria e participar da nossa cerimônia de Katb El-Ketab (contrato de casamento). Sua presença completa a nossa felicidade.",
+ verseTr:"“E entre os Seus sinais está ter criado para vocês esposas dentre vocês mesmos, para que nelas encontrem tranquilidade, e colocou entre vocês afeto e misericórdia.” (Ar-Rum 30:21)",
+ dayB:"Sábado",daySub:"السبت",monB:"Dezembro",cdT:"Contagem regressiva para o nosso grande dia",cdD:"Dias",cdH:"Horas",cdM:"Minutos",cdS:"Segundos",
  p1:"Primeira parte",katb:"Katb El-Ketab",p2:"Segunda parte",zifaf:"Festa de Casamento",lDate:"Data",lTime:"Horário",lPlace:"Local",vDate:"Sábado, 19 de dezembro de 2026",
- t1:"15h00 - 16h30",t2:"17h00 - 19h00",venue:"Diva El-Abd Village",bMap:"Localização",bCal:"Adicionar ao calendário",
- noteT:"Uma nota carinhosa",note:"A sua presença torna o nosso dia ainda mais bonito. Ficaremos felizes se nos acompanhar com um traje elegante e discreto.",family:"",
- rsvpT:"Vai estar connosco?",rsvpSub:"Por favor, confirme a sua presença para o recebermos da melhor forma",lName:"O seu nome",phName:"Escreva o seu nome",lGuests:"Número de acompanhantes",bSend:"Confirmar presença",
- dua:"Que Allah abençoe os dois e os una no bem",shareT:"Partilhar o convite",bShare:"Partilhar",bWa:"Partilhar no WhatsApp",bCopy:"Copiar link",footer:"Eng.º Mohamed Elaggouri & Dra. Sohaila El-Banna · 2026",
- needName:"Por favor, escreva o seu nome",sending:"A enviar...",thanks:"Obrigado {n}, a sua presença está confirmada. Esperamos por si!",fail:"Não foi possível enviar agora, tente novamente",copied:"Link copiado",
- shareText:"Convite para o casamento de Eng.º Mohamed Elaggouri & Dra. Sohaila El-Banna - Sábado, 19 de dezembro de 2026",shareTitle:"Convite de casamento",musicOn:"Pausar música",musicOff:"Tocar música",
+ t1:"15h00 - 16h30",t2:"17h00 - 19h00",venue:"Diva El-Abd Village",bMap:"Localização",bCal:"Adicionar à agenda",
+ noteT:"Uma nota carinhosa",note:"Sua presença torna o nosso dia ainda mais bonito. Ficaremos felizes se você vier com um traje elegante e discreto.",family:"",
+ rsvpT:"Você vem com a gente?",rsvpSub:"Por favor, confirme sua presença para recebermos você da melhor forma",lName:"Seu nome",phName:"Escreva seu nome",lGuests:"Número de acompanhantes",bSend:"Confirmar presença",
+ dua:"Que Allah abençoe os dois e os una no bem",shareT:"Compartilhar o convite",bShare:"Compartilhar",bWa:"Compartilhar no WhatsApp",bCopy:"Copiar link",footer:"Eng. Mohamed Elaggouri & Dra. Sohaila El-Banna · 2026",
+ needName:"Por favor, escreva seu nome",sending:"Enviando...",thanks:"Obrigado, {n}! Sua presença está confirmada. Esperamos por você!",fail:"Não foi possível enviar agora, tente novamente",copied:"Link copiado",
+ shareText:"Convite para o casamento de Eng. Mohamed Elaggouri & Dra. Sohaila El-Banna - Sábado, 19 de dezembro de 2026",shareTitle:"Convite de casamento",musicOn:"Pausar música",musicOff:"Tocar música",
  cal1:"Katb El-Ketab - Mohamed & Sohaila",cal2:"Casamento - Mohamed & Sohaila"}
 };
 let lang="ar";
