@@ -125,6 +125,7 @@ p{margin:0}
 
 .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 20px;border-radius:999px;border:1px solid var(--gold);color:var(--gold-lt);text-decoration:none;font:inherit;font-size:.92rem;background:transparent;cursor:pointer}
+.card .btns .btn{padding:9px 15px;font-size:.88rem}
 .btn.solid{background:linear-gradient(180deg,#E2C07A,#B98E45);color:#3A1006;font-weight:700;border-color:#B98E45}
 .card.light .btn:not(.solid){color:var(--maroon);border-color:var(--maroon2)}
 .btn:hover{filter:brightness(1.08)}
@@ -144,7 +145,7 @@ input,select{width:100%;margin-top:4px;padding:11px 12px;border-radius:12px;bord
 .music svg{width:22px;height:22px}
 .music.on{animation:spin 6s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.langs{position:fixed;z-index:40;top:calc(12px + env(safe-area-inset-top,0px));inset-inline-end:max(12px,env(safe-area-inset-right,0px));display:flex;gap:2px;padding:3px;border-radius:999px;
+.langs{position:absolute;z-index:40;top:calc(12px + env(safe-area-inset-top,0px));inset-inline-end:max(12px,env(safe-area-inset-right,0px));display:flex;gap:2px;padding:3px;border-radius:999px;
   background:rgba(46,8,16,.72);border:1px solid rgba(201,162,90,.55);backdrop-filter:blur(6px);direction:ltr}
 .langs button{font:600 .78rem/1 var(--f-body);color:#F1DCCF;background:transparent;border:0;border-radius:999px;padding:7px 10px;cursor:pointer;min-width:36px}
 .langs button[aria-pressed="true"]{background:var(--gold);color:#3A1006}
@@ -255,7 +256,6 @@ img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
     <div class="btns">
       <a class="btn" href="https://maps.app.goo.gl/qY4fRpNYsn5C37GP8" target="_blank" rel="noopener" data-i18n="bMap">الموقع</a>
       <a class="btn" href="katb.ics" download="katb.ics" data-i18n="bCal">أضف للتقويم</a>
-      <a class="btn" id="cal1" target="_blank" rel="noopener">Google Calendar</a>
     </div>
   </section>
 
@@ -272,7 +272,6 @@ img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
     <div class="btns">
       <a class="btn" href="https://maps.app.goo.gl/qY4fRpNYsn5C37GP8" target="_blank" rel="noopener" data-i18n="bMap">الموقع</a>
       <a class="btn" href="zifaf.ics" download="zifaf.ics" data-i18n="bCal">أضف للتقويم</a>
-      <a class="btn" id="cal2" target="_blank" rel="noopener">Google Calendar</a>
     </div>
   </section>
 
@@ -376,8 +375,6 @@ function applyLang(l){
   document.querySelectorAll("[data-i18n-ph]").forEach(el=>{el.placeholder=t(el.dataset.i18nPh);});
   document.getElementById("openBtn").setAttribute("aria-label",t("open"));
   document.querySelectorAll(".langs button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===lang)));
-  document.getElementById("cal1").href=cal(t("cal1"),"20261219T130000Z","20261219T143000Z",t("venue"));
-  document.getElementById("cal2").href=cal(t("cal2"),"20261219T150000Z","20261219T170000Z",t("venue"));
   document.getElementById("waShare").href="https://wa.me/?text="+encodeURIComponent(t("shareText")+"\n"+INVITE_URL);
   if(typeof setMusicUI==="function"&&!musicBtn.hidden)setMusicUI(!song.paused);
   try{localStorage.setItem("lang",lang);}catch(e){}
